@@ -4,54 +4,56 @@ Aplikasi manajemen produk sederhana untuk toko online, dibuat menggunakan FastAP
 
 ## Tech Stack
 
-- Backend: Python, FastAPI, SQLAlchemy, SQLite
-- Frontend: React, Tailwind CSS, Axios
+- **Backend:** Python, FastAPI, SQLAlchemy, SQLite
+- **Frontend:** React, Tailwind CSS, Axios
 
 ## Cara Menjalankan
 
 ### Backend
 
-1. Masuk ke folder backend dan aktifkan virtual environment:
+Masuk ke folder backend dan aktifkan virtual environment:
 
-Windows:
+**Windows:**
+```bash
 cd backend
 python -m venv venv
 venv\Scripts\activate
+pip install -r requirements.txt
+python -m uvicorn main:app --reload
+```
 
-Mac/Linux:
+**Mac/Linux:**
+```bash
 cd backend
 python -m venv venv
 source venv/bin/activate
-
-2. Install dependencies:
 pip install -r requirements.txt
-
-3. Jalankan server:
 python -m uvicorn main:app --reload
+```
 
-Server berjalan di: http://localhost:8000
+Server berjalan di: http://localhost:8000  
 Dokumentasi API: http://localhost:8000/docs
 
 ### Frontend
 
-1. Masuk ke folder frontend:
+```bash
 cd frontend
-
-2. Install dependencies:
 npm install
-
-3. Jalankan aplikasi:
 npm run dev
+```
 
 Aplikasi berjalan di: http://localhost:5173
 
-### Menjalankan Unit Test
+### Unit Test
 
+```bash
 cd backend
 pytest tests/
+```
 
 ## Struktur Project
 
+```
 product-management/
 ├── backend/
 │   ├── main.py
@@ -68,6 +70,7 @@ product-management/
         ├── components/
         ├── services/
         └── App.jsx
+```
 
 ## Catatan
 
