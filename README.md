@@ -77,3 +77,9 @@ product-management/
 - Database menggunakan SQLite, file database otomatis dibuat saat server pertama kali dijalankan
 - Tidak perlu setup environment variable apapun
 - Backend harus berjalan terlebih dahulu sebelum membuka frontend
+
+## Tradeoff
+
+- SQLite dipakai karena simpel untuk development, di production sebaiknya diganti PostgreSQL
+- Belum ada fitur search dan filter produk
+- Unit test mencakup semua endpoint CRUD utama
