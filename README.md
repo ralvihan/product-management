@@ -1,39 +1,76 @@
 # Product Management App
 
-Mini app for managing products built with FastAPI + React.
+Aplikasi manajemen produk sederhana untuk toko online, dibuat menggunakan FastAPI dan React.
 
 ## Tech Stack
+
 - Backend: Python, FastAPI, SQLAlchemy, SQLite
 - Frontend: React, Tailwind CSS, Axios
 
-## Setup & Run
+## Cara Menjalankan
 
 ### Backend
-```bash
+
+1. Masuk ke folder backend dan aktifkan virtual environment:
+
+Windows:
 cd backend
 python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # Mac/Linux
+venv\Scripts\activate
+
+Mac/Linux:
+cd backend
+python -m venv venv
+source venv/bin/activate
+
+2. Install dependencies:
 pip install -r requirements.txt
-uvicorn main:app --reload
-```
-API runs at: http://localhost:8000
-API Docs: http://localhost:8000/docs
+
+3. Jalankan server:
+python -m uvicorn main:app --reload
+
+Server berjalan di: http://localhost:8000
+Dokumentasi API: http://localhost:8000/docs
 
 ### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-App runs at: http://localhost:5173
 
-### Run Tests
-```bash
+1. Masuk ke folder frontend:
+cd frontend
+
+2. Install dependencies:
+npm install
+
+3. Jalankan aplikasi:
+npm run dev
+
+Aplikasi berjalan di: http://localhost:5173
+
+### Menjalankan Unit Test
+
 cd backend
 pytest tests/
-```
 
-## Notes
-- Database: SQLite (file-based, no setup needed)
-- No environment variables required
+## Struktur Project
+
+product-management/
+├── backend/
+│   ├── main.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── routes/
+│   │   └── products.py
+│   ├── tests/
+│   │   └── test_products.py
+│   └── requirements.txt
+└── frontend/
+    └── src/
+        ├── components/
+        ├── services/
+        └── App.jsx
+
+## Catatan
+
+- Database menggunakan SQLite, file database otomatis dibuat saat server pertama kali dijalankan
+- Tidak perlu setup environment variable apapun
+- Backend harus berjalan terlebih dahulu sebelum membuka frontend

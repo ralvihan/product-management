@@ -22,7 +22,7 @@ export default function App() {
       const res = await getProducts()
       setProducts(res.data)
     } catch {
-      setError('Failed to load products. Make sure the backend is running.')
+      setError('Gagal memuat produk. Pastikan backend sedang berjalan.')
     } finally {
       setLoading(false)
     }
@@ -44,7 +44,7 @@ export default function App() {
       setSelectedProduct(null)
       fetchProducts()
     } catch {
-      alert('Failed to save product. Please check the form and try again.')
+      alert('Gagal menyimpan produk. Cek kembali isian form.')
     } finally {
       setSaving(false)
     }
@@ -56,7 +56,7 @@ export default function App() {
       setDeleteTarget(null)
       fetchProducts()
     } catch {
-      alert('Failed to delete product.')
+      alert('Gagal menghapus produk.')
     }
   }
 
@@ -67,14 +67,14 @@ export default function App() {
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Product Management</h1>
-            <p className="text-gray-500 text-sm mt-1">{products.length} products total</p>
+            <h1 className="text-2xl font-bold text-gray-900">Manajemen Produk</h1>
+            <p className="text-gray-500 text-sm mt-1">{products.length} totalk produk</p>
           </div>
           <button
             onClick={() => { setSelectedProduct(null); setModalMode('add') }}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm font-medium"
           >
-            + Add Product
+            + Tambah Produk
           </button>
         </div>
 
@@ -102,7 +102,7 @@ export default function App() {
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 px-4">
           <div className="bg-white rounded-xl p-6 w-full max-w-lg shadow-xl">
             <h2 className="text-lg font-semibold text-gray-800 mb-5">
-              {modalMode === 'edit' ? 'Edit Product' : 'Add Product'}
+              {modalMode === 'edit' ? 'Edit Produk' : 'Tambah Produk'}
             </h2>
             <ProductForm
               initial={modalMode === 'edit' ? selectedProduct : null}

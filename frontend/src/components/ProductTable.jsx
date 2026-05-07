@@ -4,7 +4,7 @@ export default function ProductTable({ products, onEdit, onDelete }) {
   if (products.length === 0) {
     return (
       <div className="text-center py-16 text-gray-400">
-        No products yet. Add your first product!
+        Belum ada produk. Tambahkan produk pertamamu!
       </div>
     )
   }
@@ -14,7 +14,7 @@ export default function ProductTable({ products, onEdit, onDelete }) {
       <table className="w-full text-sm text-left">
         <thead className="bg-gray-50 text-gray-500 uppercase text-xs">
           <tr>
-            {['Name', 'Category', 'Price', 'Stock', 'Status', 'Actions'].map((h) => (
+            {['Nama', 'Kategori', 'Harga', 'Stok', 'Status', 'Aksi'].map((h) => (
               <th key={h} className="px-4 py-3 font-medium">{h}</th>
             ))}
           </tr>
@@ -46,7 +46,7 @@ export default function ProductTable({ products, onEdit, onDelete }) {
                     onClick={() => onDelete(p)}
                     className="px-3 py-1 text-xs rounded-lg bg-red-50 text-red-500 hover:bg-red-100 transition"
                   >
-                    Delete
+                    Hapus
                   </button>
                 </div>
               </td>

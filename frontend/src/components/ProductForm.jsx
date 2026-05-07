@@ -41,11 +41,11 @@ export default function ProductForm({ initial, onSubmit, onCancel, loading }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className={labelClass}>Name</label>
+        <label className={labelClass}>Nama</label>
         <input name="name" value={form.name} onChange={handleChange} required className={inputClass} />
       </div>
       <div>
-        <label className={labelClass}>Description</label>
+        <label className={labelClass}>Deskripsi</label>
         <textarea name="description" value={form.description} onChange={handleChange} required rows={3} className={inputClass} />
       </div>
       <div className="grid grid-cols-2 gap-4">
@@ -54,7 +54,7 @@ export default function ProductForm({ initial, onSubmit, onCancel, loading }) {
           <input name="price" type="number" min="0" step="any" value={form.price} onChange={handleChange} required className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Stock</label>
+          <label className={labelClass}>Stok</label>
           <input name="stock" type="number" min="0" value={form.stock} onChange={handleChange} required className={inputClass} />
         </div>
       </div>
@@ -71,14 +71,14 @@ export default function ProductForm({ initial, onSubmit, onCancel, loading }) {
           onChange={handleChange}
           className="w-4 h-4 accent-blue-500"
         />
-        <label htmlFor="isActive" className="text-sm text-gray-700">Active</label>
+        <label htmlFor="isActive" className="text-sm text-gray-700">Aktif</label>
       </div>
       <div className="flex gap-3 justify-end pt-2">
         <button type="button" onClick={onCancel} className="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 transition">
-          Cancel
+          Batal
         </button>
         <button type="submit" disabled={loading} className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition disabled:opacity-50">
-          {loading ? 'Saving...' : 'Save'}
+          {loading ? 'Menyimpan...' : 'Simpan'}
         </button>
       </div>
     </form>
