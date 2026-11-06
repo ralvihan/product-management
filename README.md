@@ -1,38 +1,27 @@
 # Product Management App
 
-Aplikasi manajemen produk sederhana untuk toko online, dibuat menggunakan FastAPI dan React.
+A simple product management app for online stores, built with FastAPI and React. It provides CRUD operations for products through a REST API with interactive docs, and a React frontend styled with Tailwind CSS.
 
 ## Tech Stack
 
-- **Backend:** Python, FastAPI, SQLAlchemy, SQLite
-- **Frontend:** React, Tailwind CSS, Axios
+**Backend:** Python, FastAPI, SQLAlchemy, SQLite
+**Frontend:** React, Tailwind CSS, Axios
 
-## Cara Menjalankan
+## Getting Started
+
+Start the backend first, then the frontend.
 
 ### Backend
 
-Masuk ke folder backend dan aktifkan virtual environment:
-
-**Windows:**
 ```bash
 cd backend
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate        # Mac/Linux: source venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn main:app --reload
 ```
 
-**Mac/Linux:**
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python -m uvicorn main:app --reload
-```
-
-Server berjalan di: http://localhost:8000  
-Dokumentasi API: http://localhost:8000/docs
+The API runs at http://localhost:8000, with docs at http://localhost:8000/docs.
 
 ### Frontend
 
@@ -42,16 +31,16 @@ npm install
 npm run dev
 ```
 
-Aplikasi berjalan di: http://localhost:5173
+The app runs at http://localhost:5173.
 
-### Unit Test
+### Tests
 
 ```bash
 cd backend
 pytest tests/
 ```
 
-## Struktur Project
+## Project Structure
 
 ```
 product-management/
@@ -72,14 +61,6 @@ product-management/
         └── App.jsx
 ```
 
-## Catatan
+## Notes
 
-- Database menggunakan SQLite, file database otomatis dibuat saat server pertama kali dijalankan
-- Tidak perlu setup environment variable apapun
-- Backend harus berjalan terlebih dahulu sebelum membuka frontend
-
-## Tradeoff
-
-- SQLite dipakai karena simpel untuk development, di production sebaiknya diganti PostgreSQL
-- Belum ada fitur search dan filter produk
-- Unit test mencakup semua endpoint CRUD utama
+The SQLite database file is created automatically on first run, so no environment variables are needed. SQLite keeps development simple, but PostgreSQL is the better choice for production. Product search and filtering are not implemented yet, and the unit tests cover all main CRUD endpoints.
